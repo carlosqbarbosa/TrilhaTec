@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #111;
+    color: white;
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #aaa;
+}
+
+.catalogo {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.filme {
+    width: 300px;
+    padding: 25px;
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.filme:hover {
+    transform: translateY(-8px);
+}
+
+.icone {
+    font-size: 50px;
+    margin-bottom: 15px;
+    color: #e50914;
+    transition: 0.3s;
+}
+
+.filme:hover .icone {
+    color: #ff4757;
+}
+
+.filme h2 {
+    margin-bottom: 8px;
+}
+
+.genero {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: #e50914;
+    font-weight: 600;
+}
+
+.filme p {
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.filme a {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #e50914;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.filme a:hover {
+    background-color: white;
+    color: #e50914;
+}
+
+.filme a i {
+    margin-right: 5px;
+}

@@ -57,7 +57,11 @@
         <h3>Eventos de Formulário</h3>
         <form id="area-form" class="demo-form">
           <input type="text" placeholder="Foque e digite (focus/input/blur)" required>
-          <select><option value="1">Opção 1</option><option value="2">Opção 2 (change)</option></select>
+          <label for="select-opcoes">Escolha uma opção</label>
+          <select id="select-opcoes">
+            <option value="1">Opção 1</option>
+            <option value="2">Opção 2 (change)</option>
+          </select>
           <div class="form-actions">
             <button type="submit">Enviar (submit)</button>
             <button type="reset">Limpar (reset)</button>
