@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pen</title>
+  </head>
+  <body>
+  <div class="app-container">
+  <header>
+    <h2>Laboratório de Eventos JS</h2>
+    <p>Navegue pelas abas para testar os eventos abordados nas aulas (Slides 3 a 11).</p>
+  </header>
+
+  <div class="main-content">
+    <!-- Menu de Abas -->
+    <nav class="tabs">
+      <button class="tab-btn active" onclick="openTab('mouse')">🖱️ Mouse (3-4)</button>
+      <button class="tab-btn" onclick="openTab('teclado')">⌨️ Teclado (5)</button>
+      <button class="tab-btn" onclick="openTab('form')">📝 Formulário (6)</button>
+      <button class="tab-btn" onclick="openTab('html5')">🌐 HTML5 (7)</button>
+      <button class="tab-btn" onclick="openTab('drag')">🖐️ Drag & Drop (8)</button>
+      <button class="tab-btn" onclick="openTab('clipboard')">📋 Clipboard (9)</button>
+      <button class="tab-btn" onclick="openTab('midia')">▶️ Mídia (10)</button>
+      <button class="tab-btn" onclick="openTab('progresso')">⏳ Progresso (11)</button>
+    </nav>
+
+    <!-- Áreas de Conteúdo -->
+    <div class="tab-content-container">
+      
+      <!-- 1. MOUSE -->
+      <section id="mouse" class="tab-content active">
+        <h3>Eventos de Mouse</h3>
+        <div class="interactive-box" id="area-mouse">Interaja aqui (Clique, mova, duplo clique...)</div>
+        <div class="badges">
+          <span id="b-click">click</span> <span id="b-dblclick">dblclick</span> 
+          <span id="b-mousedown">mousedown</span> <span id="b-mouseup">mouseup</span>
+          <span id="b-mouseover">mouseover</span> <span id="b-mousemove">mousemove</span>
+          <span id="b-mouseout">mouseout</span> <span id="b-mouseenter">mouseenter</span>
+          <span id="b-mouseleave">mouseleave</span> <span id="b-contextmenu">contextmenu</span>
+        </div>
+      </section>
+
+      <!-- 2. TECLADO -->
+      <section id="teclado" class="tab-content">
+        <h3>Eventos de Teclado</h3>
+        <input type="text" id="area-teclado" placeholder="Digite algo aqui..." class="input-base">
+        <div class="badges">
+          <span id="b-keydown">keydown</span> <span id="b-keypress">keypress</span> 
+          <span id="b-keyup">keyup</span>
+        </div>
+      </section>
+
+      <!-- 3. FORMULÁRIO -->
+      <section id="form" class="tab-content">
+        <h3>Eventos de Formulário</h3>
+        <form id="area-form" class="demo-form">
+          <input type="text" placeholder="Foque e digite (focus/input/blur)" required>
+          <select><option value="1">Opção 1</option><option value="2">Opção 2 (change)</option></select>
+          <div class="form-actions">
+            <button type="submit">Enviar (submit)</button>
+            <button type="reset">Limpar (reset)</button>
+          </div>
+        </form>
+        <div class="badges">
+          <span id="b-change">change</span> <span id="b-submit">submit</span> 
+          <span id="b-focus">focus</span> <span id="b-focusin">focusin</span>
+          <span id="b-reset">reset</span> <span id="b-input">input</span>
+          <span id="b-blur">blur</span> <span id="b-focusout">focusout</span>
+        </div>
+      </section>
+
+      <!-- 4. HTML5 -->
+      <section id="html5" class="tab-content">
+        <h3>Eventos HTML5 (Destaques)</h3>
+        <p class="hint">Role a caixa abaixo ou redimensione a janela do navegador.</p>
+        <div class="scroll-box" id="area-scroll">
+          <div class="tall-content">Role para baixo ↓<br><br><br>Mais para baixo...<br><br><br>Fim!</div>
+        </div>
+        <div class="badges">
+          <span id="b-scroll">scroll</span> <span id="b-resize">resize (janela)</span>
+        </div>
+      </section>
+
+      <!-- 5. DRAG & DROP -->
+      <section id="drag" class="tab-content">
+        <h3>Drag & Drop</h3>
+        <div class="drag-container">
+          <div draggable="true" id="drag-item">Arraste-me 🖐️</div>
+          <div id="drop-zone">Solte aqui 📥</div>
+        </div>
+        <div class="badges">
+          <span id="b-dragstart">dragstart</span> <span id="b-drag">drag</span>
+          <span id="b-dragend">dragend</span> <span id="b-dragenter">dragenter</span>
+          <span id="b-dragover">dragover</span> <span id="b-dragleave">dragleave</span>
+          <span id="b-drop">drop</span>
+        </div>
+      </section>
+
+      <!-- 6. CLIPBOARD -->
+      <section id="clipboard" class="tab-content">
+        <h3>Área de Transferência (Clipboard)</h3>
+        <textarea id="area-clipboard" rows="3" class="input-base" placeholder="Selecione, copie, recorte ou cole texto aqui..."></textarea>
+        <div class="badges">
+          <span id="b-copy">copy</span> <span id="b-cut">cut</span> <span id="b-paste">paste</span>
+        </div>
+      </section>
+
+      <!-- 7. MÍDIA -->
+      <section id="midia" class="tab-content">
+        <h3>Eventos de Mídia</h3>
+        <audio id="area-midia" controls src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+        <p class="hint">Dê play, pause, mude o volume ou avance o áudio.</p>
+        <div class="badges">
+          <span id="b-play">play</span> <span id="b-pause">pause</span>
+          <span id="b-timeupdate">timeupdate</span> <span id="b-volumechange">volumechange</span>
+          <span id="b-seeking">seeking</span> <span id="b-seeked">seeked</span>
+          <span id="b-ended">ended</span>
+        </div>
+      </section>
+
+      <!-- 8. PROGRESSO -->
+      <section id="progresso" class="tab-content">
+        <h3>Eventos de Progresso</h3>
+        <button id="btn-load-img" class="action-btn">Baixar Imagem Fictícia</button>
+        <div class="progress-bar-container"><div id="progress-bar"></div></div>
+        <div class="badges">
+          <span id="b-loadstart">loadstart</span> <span id="b-progress">progress</span>
+          <span id="b-load">load</span> <span id="b-loadend">loadend</span>
+          <span id="b-error">error</span> <span id="b-abort">abort</span>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</div>
+    <script src="./script.js"></script>
+  </body>
+</html>

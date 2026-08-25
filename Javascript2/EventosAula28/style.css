@@ -1,0 +1,131 @@
+:root {
+  --primary-blue: #172b4d;
+  --primary-orange: #E25822;
+  --bg-color: #f4f5f7;
+  --card-bg: #ffffff;
+  --border-radius: 10px;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.app-container {
+  background: var(--card-bg);
+  width: 100%;
+  max-width: 900px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+header {
+  background-color: var(--primary-blue);
+  color: white;
+  padding: 20px 30px;
+  text-align: center;
+}
+
+header h2 { margin: 0 0 5px 0; }
+header p { margin: 0; font-size: 0.9em; opacity: 0.8; }
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+}
+
+@media(min-width: 768px) {
+  .main-content { flex-direction: row; min-height: 500px; }
+}
+
+.tabs {
+  display: flex;
+  flex-direction: column;
+  background-color: #e9ecef;
+  min-width: 220px;
+}
+
+.tab-btn {
+  padding: 15px 20px;
+  text-align: left;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #dee2e6;
+  font-size: 1em;
+  color: #495057;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.tab-btn:hover { background-color: #dee2e6; }
+.tab-btn.active {
+  background-color: white;
+  border-left: 5px solid var(--primary-orange);
+  font-weight: bold;
+  color: var(--primary-blue);
+}
+
+.tab-content-container {
+  padding: 30px;
+  flex-grow: 1;
+}
+
+.tab-content { display: none; }
+.tab-content.active { display: block; animation: fadeIn 0.3s; }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+
+h3 { color: var(--primary-blue); margin-top: 0; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; }
+
+/* Elementos Interativos Gerais */
+.interactive-box {
+  height: 150px; border: 3px dashed #adb5bd; border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  background: #f8f9fa; color: #6c757d; font-weight: bold; user-select: none;
+  cursor: crosshair; margin-bottom: 20px; transition: 0.2s;
+}
+.interactive-box:hover { background: #e9ecef; }
+
+.input-base {
+  width: 100%; padding: 12px; border: 2px solid #ced4da;
+  border-radius: 6px; font-size: 16px; margin-bottom: 20px; box-sizing: border-box;
+}
+
+/* Badges (Tags de Eventos) */
+.badges { display: flex; flex-wrap: wrap; gap: 10px; }
+.badges span {
+  background-color: #e9ecef; color: #495057; padding: 6px 12px;
+  border-radius: 20px; font-size: 0.85em; font-weight: bold;
+  transition: all 0.3s; border: 2px solid transparent;
+}
+.badges span.flash {
+  background-color: var(--primary-orange); color: white;
+  transform: scale(1.1); box-shadow: 0 4px 8px rgba(226, 88, 34, 0.4);
+}
+
+/* Específicos */
+.demo-form { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+.demo-form input, .demo-form select { padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
+.form-actions { display: flex; gap: 10px; }
+.form-actions button, .action-btn {
+  padding: 10px 15px; border: none; border-radius: 4px; background: var(--primary-blue);
+  color: white; cursor: pointer; font-weight: bold;
+}
+
+.scroll-box { height: 120px; overflow-y: auto; border: 2px solid #ccc; border-radius: 6px; margin-bottom: 20px; background: #f8f9fa;}
+.tall-content { height: 400px; padding: 10px; text-align: center; color: #aaa; }
+
+.drag-container { display: flex; gap: 20px; margin-bottom: 20px; }
+#drag-item { padding: 20px; background: var(--primary-blue); color: white; border-radius: 8px; cursor: grab; }
+#drop-zone { flex-grow: 1; border: 2px dashed #adb5bd; border-radius: 8px; display: flex; align-items: center; justify-content: center; background: #f8f9fa; color: #aaa; }
+#drop-zone.hover { background: #d4edda; border-color: #28a745; color: #155724; }
+
+.hint { font-size: 0.85em; color: #666; margin-bottom: 10px; }
+
+.progress-bar-container { height: 10px; background: #e9ecef; border-radius: 5px; margin: 15px 0; overflow: hidden; }
+#progress-bar { height: 100%; width: 0%; background: var(--primary-orange); transition: 0.1s; }
