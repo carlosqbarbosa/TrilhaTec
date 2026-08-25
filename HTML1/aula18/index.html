@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto - aula 18</title>
+</head>
+<body>
+        <header>
+
+        <h1>Explorando o Mundo</h1>
+
+        <p>Seu próximo destino começa aqui</p>
+
+        <nav>
+            <ul>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#promocoes">Promoções</a></li>
+                <li><a href="#destinos">Destinos</a></li>
+                <li><a href="#formulario">Reservas</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <!-- FAQ -->
+        <section id="faq">
+
+            <h2>Dúvidas Frequentes (FAQ)</h2>
+
+            <details>
+                <summary>Quais são as formas de pagamento?</summary>
+
+                <p>
+                    Aceitamos cartões de crédito em até 12x,
+                    boleto bancário e PIX com 5% de desconto.
+                </p>
+
+            </details>
+
+            <details>
+
+                <summary>Preciso de visto para todos os destinos?</summary>
+
+                <p>
+                    Não. Muitos destinos na América do Sul exigem apenas o RG.
+                    Consulte nossa equipe para destinos internacionais específicos.
+                </p>
+
+            </details>
+
+        </section>
+
+        <hr>
+
+        <!-- PROMOÇÕES -->
+        <section id="promocoes">
+
+            <h2>Calendário de Eventos e Promoções</h2>
+
+            <table border="1">
+
+                <thead>
+
+                    <tr>
+
+                        <th>Evento / Destino</th>
+                        <th>Data</th>
+                        <th>Detalhes</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>Pacote Verão em Cancún</td>
+
+                        <td>
+                            <time datetime="2026-12-15">
+                                15 de Dezembro
+                            </time>
+                        </td>
+
+                        <td>30% de desconto para compras antecipadas.</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Expedição Aurora Boreal</td>
+
+                        <td>
+                            <time datetime="2026-02-10">
+                                10 de Fevereiro
+                            </time>
+                        </td>
+
+                        <td>Vagas limitadas para o grupo de fotografia.</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Carnaval no Rio</td>
+
+                        <td>
+                            <time datetime="2026-03-01">
+                                01 de Março
+                            </time>
+                        </td>
+
+                        <td>Hospedagem em Copacabana inclusa.</td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <hr>
+
+        <!-- DESTINOS -->
+        <section id="destinos">
+
+            <h2>Destinos Populares</h2>
+
+            <figure>
+
+                <img
+                    src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+                    alt="Praia em Cancún"
+                    width="300">
+
+                <figcaption>
+                    Cancún - México | Praias paradisíacas e resorts incríveis.
+                </figcaption>
+
+                <p>Popularidade:</p>
+
+                <progress value="90" max="100"></progress>
+
+            </figure>
+
+            <br>
+
+            <figure>
+
+                <img
+                    src="https://images.unsplash.com/photo-1516306580123-e6e52b1b7b5f"
+                    alt="Aurora Boreal"
+                    width="300">
+
+                <figcaption>
+                    Islândia - Experiência única para ver a Aurora Boreal.
+                </figcaption>
+
+                <p>Popularidade:</p>
+
+                <progress value="75" max="100"></progress>
+
+            </figure>
+
+            <br>
+
+            <figure>
+
+                <img
+                    src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325"
+                    alt="Rio de Janeiro"
+                    width="300">
+
+                <figcaption>
+                    Rio de Janeiro - Cultura, praias e o melhor carnaval do mundo.
+                </figcaption>
+
+                <p>Popularidade:</p>
+
+                <progress value="95" max="100"></progress>
+
+            </figure>
+
+        </section>
+
+        <hr>
+
+        <!-- FORMULÁRIO -->
+        <section id="formulario">
+
+            <h2>Faça sua Reserva</h2>
+
+            <form action="#" method="post">
+
+                <!-- Nome -->
+                <label for="nome">Nome completo:</label><br>
+
+                <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    placeholder="Digite seu nome"
+                    required>
+
+                <br><br>
+
+                <!-- Telefone -->
+                <label for="telefone">Telefone:</label><br>
+
+                <input
+                    type="tel"
+                    id="telefone"
+                    name="telefone"
+                    placeholder="(81) 99999-9999"
+                    pattern="\(\d{2}\)\s\d{5}-\d{4}"
+                    required>
+
+                <br><br>
+
+                <!-- Destino -->
+                <label for="destino">Escolha seu destino:</label><br>
+
+                <input
+                    list="lista-destinos"
+                    id="destino"
+                    name="destino"
+                    placeholder="Digite um destino"
+                    required>
+
+                <datalist id="lista-destinos">
+
+                    <option value="Paris">
+                    <option value="Tóquio">
+                    <option value="Nova York">
+                    <option value="Rio de Janeiro">
+                    <option value="Londres">
+                    <option value="Roma">
+                    <option value="Dubai">
+
+                </datalist>
+
+                <br><br>
+
+                <!-- Data -->
+                <label for="data-viagem">Data da viagem:</label><br>
+
+                <input
+                    type="date"
+                    id="data-viagem"
+                    name="data-viagem"
+                    min="2026-01-01"
+                    max="2026-12-31"
+                    required>
+
+                <br><br>
+
+                <!-- Quantidade -->
+                <label for="pessoas">
+                    Quantidade de viajantes:
+                </label><br>
+
+                <input
+                    type="range"
+                    id="pessoas"
+                    name="pessoas"
+                    min="1"
+                    max="10"
+                    value="2"
+                    oninput="resultado.value = pessoas.value">
+
+                <output id="resultado">2</output>
+
+                <br><br>
+
+                <!-- Mensagem -->
+                <label for="mensagem">
+                    Observações:
+                </label><br>
+
+                <textarea
+                    id="mensagem"
+                    name="mensagem"
+                    rows="5"
+                    cols="40"
+                    placeholder="Escreva detalhes da viagem">
+                </textarea>
+
+                <br><br>
+
+                <button type="submit">
+                    Enviar Reserva
+                </button>
+
+            </form>
+
+        </section>
+
+        <hr>
+
+        <!-- DICAS -->
+        <section id="dicas">
+
+            <h2>Dicas de Viagem</h2>
+
+            <ul>
+
+                <li>
+                    Leve sempre documentos organizados.
+                    <meter value="9" min="0" max="10"></meter>
+                </li>
+
+                <li>
+                    Faça seguro viagem internacional.
+                    <meter value="10" min="0" max="10"></meter>
+                </li>
+
+                <li>
+                    Aprenda frases básicas do idioma local.
+                    <meter value="7" min="0" max="10"></meter>
+                </li>
+
+                <li>
+                    Monte um roteiro antes da viagem.
+                    <meter value="8" min="0" max="10"></meter>
+                </li>
+
+            </ul>
+
+        </section>
+
+        <hr>
+
+        <!-- ESTATÍSTICAS -->
+        <section id="estatisticas">
+
+            <h2>Estatísticas da Agência</h2>
+
+            <p>Clientes atendidos este ano:</p>
+
+            <progress value="850" max="1000"></progress>
+
+            <p>850 de 1000 clientes</p>
+
+            <p>Pacotes vendidos:</p>
+
+            <progress value="620" max="800"></progress>
+
+            <p>620 de 800 pacotes</p>
+
+            <p>Crescimento da agência:</p>
+
+            <progress value="70" max="100"></progress>
+
+            <p>70% da meta anual alcançada</p>
+
+        </section>
+
+    </main>
+
+    <!-- ASIDE -->
+    <aside>
+
+        <h3>Contato e Informações</h3>
+
+        <address>
+
+            <strong>Agência Explorando o Mundo</strong><br>
+
+            Rua das Viagens, 123 - Centro<br>
+
+            Recife, PE - Brasil<br>
+
+            <a href="mailto:contato@explorando.com">
+                contato@explorando.com
+            </a><br>
+
+            Telefone: (81) 3333-4444
+
+        </address>
+
+        <p>
+
+            <strong>Horário de Atendimento:</strong><br>
+
+            Segunda a Sexta: 08h às 18h<br>
+
+            Sábado: 09h às 13h
+
+        </p>
+
+        <hr>
+
+        <!-- NEWSLETTER -->
+        <h4>Receba Ofertas</h4>
+
+        <form action="#" method="POST">
+
+            <label for="email">E-mail:</label><br>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="seu@email.com"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                required>
+
+            <br><br>
+
+            <button type="submit">
+                Inscrever-se
+            </button>
+
+        </form>
+
+    </aside>
+
+    <footer>
+
+        <hr>
+
+        <p>
+            © 2026 Explorando o Mundo - Todos os direitos reservados.
+        </p>
+
+    </footer>
+</body>
+</html>
