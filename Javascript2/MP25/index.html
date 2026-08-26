@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pen</title>
+  </head>
+  <body>
+    <div id='container'>
+    <div id='form-container'>
+        <form>
+            <label for="nome">Nome:</label><br>
+            <input type="text" id="nome" name="nome" value="Nome"><br>
+
+            <label for="sobrenome">Sobrenome:</label><br>
+            <input type="text" id="sobrenome" name="sobrenome" value="Sobrenome"><br>
+
+            <label for="position">Posição:</label><br>
+            <select id="position">
+                <option value="cima">Em cima</option>
+                <option value="baixo">Em baixo</option>
+            </select>
+
+            <br>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+    <div id="table-container">
+  <table>
+  <tr>
+    <th>id</th>
+    <th>Nome</th>
+    <th>Email</th>
+    <th>Ação</th> 
+  </tr>
+  <tr id='linha_0'>
+    <td>0</td>
+    <td>Tulio</td>
+    <td>tulio@tulio.com</td>
+    <td><button id="delete_0" class='delete'>delete</button></td>
+  </tr>
+</table>
+</div>
+</div>  
+    <script src="./script.js"></script>
+  </body>
+</html>
