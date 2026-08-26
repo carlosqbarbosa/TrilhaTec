@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    color: #c0392b;
+}
+
+.ingredientes {
+    background-color: #fff3cd;
+    border: 2px solid #d4a017;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.modo {
+    background-color: #d4edda;
+    border: 2px solid #28a745;
+    padding: 10px;
+    margin-bottom: 20px;
+}
