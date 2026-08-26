@@ -1,0 +1,22 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 30px;
+}
+
+.highlight {
+  background-color: #fff3cd;
+  border: 2px solid #ffc107;
+  padding: 10px;
+}
+
+#innerContainer {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+#innerContainer div {
+  background-color: #d1ecf1;
+  padding: 10px;
+  margin-bottom: 10px;
+}
