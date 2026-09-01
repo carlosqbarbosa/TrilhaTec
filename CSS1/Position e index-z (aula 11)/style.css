@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    color: #333;
+}
+
+header {
+    height: 70px;
+    background: #e3350d;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+    position: relative;
+    z-index: 10;
+}
+
+header h1 {
+    font-size: 28px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: bold;
+}
+
+.pokemon {
+    width: 100%;
+    min-height: 550px;
+    background: #d8f3dc;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circulo {
+    width: 420px;
+    height: 420px;
+    background: #95d5b2;
+    border-radius: 50%;
+    position: absolute;
+    left: 10%;
+    top: 60px;
+    z-index: 1;
+}
+
+.circulo2 {
+    width: 300px;
+    height: 300px;
+    background: #b7e4c7;
+    border-radius: 50%;
+    position: absolute;
+    right: 8%;
+    bottom: -100px;
+    z-index: 1;
+}
+
+.imagem {
+    width: 330px;
+    position: relative;
+    z-index: 3;
+    transition: transform 0.3s;
+}
+
+.imagem:hover {
+    transform: scale(1.08);
+}
+
+.informacoes {
+    width: 380px;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    position: relative;
+    z-index: 4;
+}
+
+.informacoes h2 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.numero {
+    color: #777;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.tipo {
+    display: inline-block;
+    background: #78c850;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.informacoes p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.dados {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.dados div {
+    text-align: center;
+}
+
+.dados strong {
+    display: block;
+    font-size: 20px;
+}
+
+.batalha {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #e3350d;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-weight: bold;
+    z-index: 5;
+}
+
+.descricao {
+    background: white;
+    padding: 50px 10%;
+    text-align: center;
+}
+
+.descricao h2 {
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+
+.descricao p {
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.7;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+@media (max-width: 800px) {
+    .pokemon {
+        flex-direction: column;
+        padding: 50px 20px;
+    }
+
+    .informacoes {
+        width: 90%;
+    }
+
+    .imagem {
+        width: 260px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .circulo {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
